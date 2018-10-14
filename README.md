@@ -4,7 +4,7 @@
 only the C++ code generator works on Arch Linux
 
 # Prerequisites
-```
+```bash
 sudo pacman -S dotnet-host \
                 dotnet-runtime \
                 dotnet-sdk \
@@ -15,13 +15,13 @@ sudo pacman -S dotnet-host \
 ```
 
 # Installing libobjwriter.so
-```
+```bash
 cd package/libobjwriter-bin
 makepkg -sci
 ```
 
 # Configure project to use CoreRT
-```
+```bash
 curl https://raw.githubusercontent.com/tim241/corert-archlinux/master/nuget.config -o nuget.config
 
 dotnet add package Microsoft.DotNet.ILCompiler -v 1.0.0-alpha-*
@@ -44,7 +44,7 @@ Add this to the PropertyGroup of your csproj
 ```
 
 # Compiling
-```
+```bash
 dotnet publish -r linux-x64
 ```
 
