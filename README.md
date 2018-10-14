@@ -45,6 +45,7 @@ Add this to the PropertyGroup of your csproj
 
 # Compiling
 ```bash
+export CppCompilerAndLinker=clang
 dotnet publish -r linux-x64
 ```
 
