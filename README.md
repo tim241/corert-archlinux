@@ -30,8 +30,8 @@ sed -i "s|<clear />|<clear />\n$nuget\n$nuget2\n|g" nuget.config
 
 dotnet add package Microsoft.DotNet.ILCompiler -v 1.0.0-alpha-*
 
-dir="$(ls ~/.nuget/packages/microsoft.dotnet.ilcompiler/ | head -1)"
-dir2="$HOME/.nuget/packages/microsoft.dotnet.ilcompiler/$dir/inc"
+dir="$(ls ~/.nuget/packages/runtime.linux-x64.microsoft.dotnet.ilcompiler/ | head -1)"
+dir2="$HOME/.nuget/packages/runtime.linux-x64.microsoft.dotnet.ilcompiler/$dir/inc"
 url="https://github.com/dotnet/corert/blob/master/src/Native/Bootstrap/"
 
 mkdir -p "$dir2"
