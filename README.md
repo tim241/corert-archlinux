@@ -22,11 +22,7 @@ makepkg -sci
 
 # Configure project to use CoreRT
 ```
-nuget='<add key="dotnet-core" value="https://dotnet.myget.org/F/dotnet-core/api/v3/index.json" />'
-nuget2='<add key="nuget.org" value="https://api.nuget.org/v3/index.json" protocolVersion="3" />'
-
-dotnet new nuget
-sed -i "s|<clear />|<clear />\n$nuget\n$nuget2\n|g" nuget.config
+curl https://raw.githubusercontent.com/tim241/corert-archlinux/master/nuget.config -o nuget.config
 
 dotnet add package Microsoft.DotNet.ILCompiler -v 1.0.0-alpha-*
 
