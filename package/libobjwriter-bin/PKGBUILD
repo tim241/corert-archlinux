@@ -4,9 +4,9 @@ pkgver=1
 pkgurl="https://github.com/dotnet/corert"
 arch=('x86_64')
 source=('https://raw.githubusercontent.com/tim241/corert-archlinux/master/bin/lib/libobjwriter.so')
-md5sums=('SKIP')
+md5sums=('64be4b55ad65347a5c726b4fea096acb')
 
 package()
 {
-    install -D libobjwriter.so "$pkgdir/lib64/libobjwriter.so"
+    install -D libobjwriter.so "$pkgdir/usr/lib/libobjwriter.so"
 }
