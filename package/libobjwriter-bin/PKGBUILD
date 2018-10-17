@@ -1,4 +1,5 @@
 pkgname=libobjwriter-bin
+provides=(libobjwriter)
 pkgrel=1
 pkgver=1
 pkgurl="https://github.com/dotnet/corert"

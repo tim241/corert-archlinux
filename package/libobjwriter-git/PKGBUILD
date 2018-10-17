@@ -1,4 +1,5 @@
 pkgname=libobjwriter-git
+provides=(libobjwriter)
 pkgrel=1
 pkgver=1
 pkgurl="https://github.com/dotnet/corert"
@@ -21,7 +22,7 @@ prepare()
 build()
 {
     cd llvm
-    mkdir build
+    mkdir -p build
     cd build
     cmake ../ -DCMAKE_BUILD_TYPE=Release \
         -DLLVM_OPTIMIZED_TABLEGEN=1 \
@@ -37,6 +38,6 @@ build()
 
 package()
 {
-    cd llvm
+    cd llvm/build
     install -D lib/libobjwriter.so "$pkgdir/usr/lib/libobjwriter.so"
 }
