@@ -25,15 +25,6 @@ makepkg -sci
 curl https://raw.githubusercontent.com/tim241/corert-archlinux/master/nuget.config -o nuget.config
 
 dotnet add package Microsoft.DotNet.ILCompiler -v 1.0.0-alpha-*
-
-dir="$(ls ~/.nuget/packages/runtime.linux-x64.microsoft.dotnet.ilcompiler/ | head -1)"
-dir2="$HOME/.nuget/packages/runtime.linux-x64.microsoft.dotnet.ilcompiler/$dir/inc"
-url="https://raw.githubusercontent.com/dotnet/corert/master/src/Native/Bootstrap/"
-
-mkdir -p "$dir2"
-
-curl $url/common.h -o "$dir2/common.h"
-curl $url/CppCodeGen.h -o "$dir2/CppCodeGen.h"
 ```
 
 # Configuring CoreRT to generate C++ code
